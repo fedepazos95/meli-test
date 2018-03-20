@@ -1,0 +1,29 @@
+.header {
+  background-color: #FFE600;
+  padding: 10px;
+}
+.bc {
+  padding: 16px 0px 16px 0px;
+  font-size: 14px;
+  color: #999999;
+}
+.search-price {
+  font-size: 24px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+}
+.search-title {
+  font-size: 18px;
+  display: inline-block;
+}
+.search-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+}
+.list-group {
+  padding-bottom: 50px;
+}
+.list-group li {
+  padding: 16px;
+}
