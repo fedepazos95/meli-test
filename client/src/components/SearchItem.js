@@ -25,7 +25,7 @@ class SearchItem extends Component {
         />
         <div className="d-flex flex-column">
           <div
-            className="search-item-price"
+            className="search-item-price f24"
             onClick={() => this.handleClick(this.props.item.id)}
           >
             $ {this.props.item.price}
@@ -37,7 +37,7 @@ class SearchItem extends Component {
               />
             )}
           </div>
-          <div className="search-item-title">{this.props.item.title}</div>
+          <div className="search-item-title f18">{this.props.item.title}</div>
         </div>
       </div>
     );

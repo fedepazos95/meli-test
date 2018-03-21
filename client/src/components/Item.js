@@ -4,6 +4,7 @@ import * as actions from "../actions";
 
 // Assets
 import shipping from "../assets/ic_shipping.png";
+import loading from '../assets/loading.png';
 
 class Item extends Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class Item extends Component {
 
   render() {
     if (!this.props.item) {
-      return null;
+      return <img src={loading} alt="loading" className="loading"/>;
     }
 
     const { item } = this.props;
@@ -27,26 +28,27 @@ class Item extends Component {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-10 offset-1">
-            <div className="bc">{item.id}</div>
+            <div className="bc f14">{item.id}</div>
             <div className="item-box">
               <div className="d-flex flex-row">
                 <img src={item.picture} alt="item-img" className="item-img" />
-                <div className="d-flex flex-column">
-                  <div className="item-condition">
+                <div className="d-flex flex-column details-box">
+                  <div className="item-condition f14">
                     {(item.condition === "new" ? "Nuevo" : null) +
                       " - " +
                       item.sold_quantity +
                       " vendidos"}
                   </div>
-                  <div className="item-title">{item.title}</div>
-                  <div className="item-price">$ {item.price.amount}</div>
+                  <div className="f24">{item.title}</div>
+                  <div className="item-price f46">$ {item.price.amount}</div>
+                  <button className="btn btn-primary btn-comprar">Comprar</button>
                 </div>
               </div>
               <div className="d-flex flex-row">
-                <div className="item-desc">Descripción del producto</div>
+                <div className="item-desc f28">Descripción del producto</div>
               </div>
               <div className="d-flex flex-row">
-                <div className="item-info">{item.description}</div>
+                <div className="item-info f16">{item.description}</div>
               </div>
             </div>
           </div>

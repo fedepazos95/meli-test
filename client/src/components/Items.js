@@ -7,6 +7,9 @@ import * as actions from "../actions";
 // Components
 import SearchItem from "./SearchItem";
 
+// Assets
+import loading from '../assets/loading.png';
+
 class Items extends Component {
   componentDidMount() {
     this.doSearch(this.props.location);
@@ -39,14 +42,14 @@ class Items extends Component {
   render() {
     console.log(this.props);
     if (this.props.items === null && this.props.categories === null) {
-      return null;
+      return <img src={loading} alt="loading" className="loading"/>;
     }
 
     return (
       <div className="container">
         <div className="row align-items-center">
           <div className="col-10 offset-1">
-            <div className="bc">{this.props.categories.name}</div>
+            <div className="bc f14">{this.props.categories.name}</div>
             <div className="results-box">{this.renderItems()}</div>
           </div>
         </div>
@@ -55,7 +58,7 @@ class Items extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return { items: state.items.items, categories: state.items.categories };
 };
 
