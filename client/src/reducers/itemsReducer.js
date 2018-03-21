@@ -1,9 +1,18 @@
-import { FETCH_ITEMS } from '../actions/types';
+import { FETCH_ITEMS, FETCH_ITEM } from '../actions/types';
 
-const itemsReducer = (state = null, action) => {
+const initialState = {
+  author: null,
+  categories: null,
+  items: null,
+  item: null,
+}
+
+const itemsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ITEMS:
-      return action.payload || false;
+      return { ...state, ...action.payload };
+    case FETCH_ITEM:
+      return { ...state, ...action.payload };
     default:
       return state;
   }
