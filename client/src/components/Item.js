@@ -32,18 +32,21 @@ class Item extends Component {
               <div className="d-flex flex-row">
                 <img src={item.picture} alt="item-img" className="item-img" />
                 <div className="d-flex flex-column">
-                  <div className="search-item-price">
-                    $ {item.price.amount}
-                    {item.free_shipping && (
-                      <img
-                        className="shipping-icon align-items-center"
-                        src={shipping}
-                        alt="shipping"
-                      />
-                    )}
+                  <div className="item-condition">
+                    {(item.condition === "new" ? "Nuevo" : null) +
+                      " - " +
+                      item.sold_quantity +
+                      " vendidos"}
                   </div>
-                  <div className="search-item-title">{item.title}</div>
+                  <div className="item-title">{item.title}</div>
+                  <div className="item-price">$ {item.price.amount}</div>
                 </div>
+              </div>
+              <div className="d-flex flex-row">
+                <div className="item-desc">Descripción del producto</div>
+              </div>
+              <div className="d-flex flex-row">
+                <div className="item-info">{item.description}</div>
               </div>
             </div>
           </div>

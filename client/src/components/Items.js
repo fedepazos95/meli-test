@@ -8,19 +8,11 @@ import * as actions from "../actions";
 import SearchItem from "./SearchItem";
 
 class Items extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      category: ""
-    };
-  }
-
   componentDidMount() {
     this.doSearch(this.props.location);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ category: nextProps.items.categories.name });
     if (this.props.location.search !== nextProps.location.search) {
       this.doSearch(nextProps.location);
     }
@@ -34,7 +26,7 @@ class Items extends Component {
   }
 
   renderItems() {
-    return _.map(this.props.items.items, (item, key) => {
+    return _.map(this.props.items, (item, key) => {
       return (
         <div className="items-list" key={key}>
           <SearchItem item={item} />
@@ -45,7 +37,8 @@ class Items extends Component {
   }
 
   render() {
-    if (this.props.items === null) {
+    console.log(this.props);
+    if (this.props.items === null && this.props.categories === null) {
       return null;
     }
 
@@ -53,7 +46,7 @@ class Items extends Component {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-10 offset-1">
-            <div className="bc">{this.state.category}</div>
+            <div className="bc">{this.props.categories.name}</div>
             <div className="results-box">{this.renderItems()}</div>
           </div>
         </div>
@@ -62,8 +55,8 @@ class Items extends Component {
   }
 }
 
-const mapStateToProps = ({ items }) => {
-  return { items: items };
+const mapStateToProps = (state) => {
+  return { items: state.items.items, categories: state.items.categories };
 };
 
 export default connect(mapStateToProps, actions)(Items);

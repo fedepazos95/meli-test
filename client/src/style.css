@@ -43,8 +43,35 @@
 .item-box {
   background-color: white;
   border-radius: 4px;
+  padding: 16px;
 }
 .item-img {
   width: 680px;
   height: 680px;
+  padding: 32px;
+}
+.item-condition {
+  font-size: 14px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.item-title {
+  font-size: 24px;
+}
+.item-price {
+  font-size: 46px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.item-desc {
+  font-size: 28px;
+  margin-left: 32px;
+}
+.item-info {
+  font-size: 16px;
+  color: #999999;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 32px;
+  width: 680px;
 }
