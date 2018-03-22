@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 
 // Assets
-import shipping from "../assets/ic_shipping.png";
+import './css/item.css';
 import loading from '../assets/loading.png';
 
 class Item extends Component {
@@ -25,19 +25,16 @@ class Item extends Component {
 
     const { item } = this.props;
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-10 offset-1">
-            <div className="bc f14">{item.id}</div>
-            <div className="item-box">
+            <div className="bc f14">{item.title}</div>
+            <div className="box">
               <div className="d-flex flex-row">
-                <img src={item.picture} alt="item-img" className="item-img" />
-                <div className="d-flex flex-column details-box">
+                <img src={item.picture} alt="item-img" className="item-img col-7" />
+                <div className="d-flex flex-column details-box col-3">
                   <div className="item-condition f14">
-                    {(item.condition === "new" ? "Nuevo" : null) +
-                      " - " +
-                      item.sold_quantity +
-                      " vendidos"}
+                    {item.condition + " - " + item.sold_quantity + " vendidos"}
                   </div>
                   <div className="f24">{item.title}</div>
                   <div className="item-price f46">$ {item.price.amount}</div>
@@ -45,10 +42,10 @@ class Item extends Component {
                 </div>
               </div>
               <div className="d-flex flex-row">
-                <div className="item-desc f28">Descripción del producto</div>
+                <div className="item-desc f28 col-7">Descripción del producto</div>
               </div>
               <div className="d-flex flex-row">
-                <div className="item-info f16">{item.description}</div>
+                <div className="item-info f16 col-7">{item.description}</div>
               </div>
             </div>
           </div>

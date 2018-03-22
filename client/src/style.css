@@ -1,3 +1,6 @@
+/* Global */
+
+/* Font Sizes */
 .f14 {
   font-size: 14px;
 }
@@ -17,6 +20,7 @@
   font-size: 46px;
 }
 
+/* Misc */
 .loading {
   display: block;
   margin-top: 50px;
@@ -33,77 +37,12 @@
     transform: rotate(360deg);
   }
 }
-.btn-comprar {
-  background-color: #3483fa;
-  margin-right: 32px;
-}
-.header {
-  background-color: #ffe600;
-  padding: 10px;
-}
 .bc {
   padding: 16px 0px 16px 0px;
   color: #999999;
 }
-.items-list hr {
-  padding: 0px;
-  margin: 0px;
-  margin-left: 16px;
-  margin-left: 16px;
-}
-.results-box {
-  background-color: white;
-  border-radius: 4px;
-}
-.search-item {
-  padding: 16px;
-}
-.search-item-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.search-item-price {
-  margin: 16px 0px 32px 16px;
-  cursor: pointer;
-}
-.search-item-title {
-  margin-left: 16px;
-}
-.shipping-icon {
-  padding-left: 8px;
-  padding-bottom: 4px;
-}
-
-.item-box {
+.box {
   background-color: white;
   border-radius: 4px;
   margin-bottom: 32px;
-}
-.item-img {
-  width: 680px;
-  margin: 32px;
-}
-.item-condition {
-  margin-bottom: 16px;
-}
-.item-price {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-.item-desc {
-  margin-top: 16px;
-  margin-left: 32px;
-}
-.item-info {
-  color: #999999;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 32px;
-  width: 680px;
-}
-.details-box {
-  margin-top: 32px;
-  margin-right: 32px;
 }

@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import SearchBox from './SearchBox';
 
 // Assets
+import './css/header.css';
 import logo from '../assets/Logo_ML.png';
 
 const Header = () => {
   return (
     <div className="header">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-1 offset-1">
             <div className="text-center">

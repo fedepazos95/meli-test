@@ -5,10 +5,9 @@ utils.formatSearchReponse = response => {
   const categories = _.find(response.data.available_filters, (c) => {
     return c.id === 'category';
   });
-  console.log(categories);
-  const category = _.maxBy(response.data.available_filters[0].values, o => {
-    return o.results;
-  });
+  const category = (categories) 
+    ? _.maxBy(categories.values, o => { return o.results; }) 
+    : { name: 'Todos los resultados'};
   return {
     author: {
       name: "Federico",

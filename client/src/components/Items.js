@@ -8,6 +8,7 @@ import * as actions from "../actions";
 import SearchItem from "./SearchItem";
 
 // Assets
+import './css/items.css';
 import loading from '../assets/loading.png';
 
 class Items extends Component {
@@ -40,17 +41,16 @@ class Items extends Component {
   }
 
   render() {
-    console.log(this.props);
     if (this.props.items === null && this.props.categories === null) {
       return <img src={loading} alt="loading" className="loading"/>;
     }
 
     return (
-      <div className="container">
-        <div className="row align-items-center">
+      <div className="container-fluid">
+        <div className="row">
           <div className="col-10 offset-1">
             <div className="bc f14">{this.props.categories.name}</div>
-            <div className="results-box">{this.renderItems()}</div>
+            <div className="box">{this.renderItems()}</div>
           </div>
         </div>
       </div>

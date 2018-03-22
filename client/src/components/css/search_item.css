@@ -1,0 +1,20 @@
+.search-item {
+    padding: 16px;
+  }
+  .search-item-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .search-item-price {
+    margin: 16px 0px 32px 16px;
+    cursor: pointer;
+  }
+  .search-item-title {
+    margin-left: 16px;
+  }
+  .shipping-icon {
+    padding-left: 8px;
+    padding-bottom: 4px;
+  }

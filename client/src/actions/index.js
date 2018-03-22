@@ -2,7 +2,7 @@ import axios from "axios";
 import { IS_FETCHING, FETCH_ITEMS, FETCH_ITEM } from "./types";
 
 export const fetchItems = query => async dispatch => {
-  dispatch({ type: IS_FETCHING, isFetching: true, items: null, categories: null});
+  dispatch({ type: IS_FETCHING, isFetching: true, items: null, categories: null });
   const res = await axios.get(`/api/items?q=${query}`);
   dispatch({ type: FETCH_ITEMS, payload: res.data });
 };

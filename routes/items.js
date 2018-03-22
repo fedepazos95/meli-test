@@ -17,9 +17,7 @@ module.exports = app => {
     axios
       .all([
         axios.get(`https://api.mercadolibre.com/items/${req.params.id}`),
-        axios.get(
-          `https://api.mercadolibre.com/items/${req.params.id}/description`
-        )
+        axios.get(`https://api.mercadolibre.com/items/${req.params.id}/description`)
       ])
       .then(
         axios.spread((itemRes, descriptionRes) => {

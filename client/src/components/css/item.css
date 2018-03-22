@@ -1,0 +1,34 @@
+.item-img {
+    padding: 0px !important;
+    width: 680px;
+    height: 680px;
+    margin: 32px;
+  }
+  .details-box {
+    margin-top: 32px;
+    margin-right: 32px;
+  }
+  .item-condition {
+    margin-bottom: 16px;
+  }
+  .item-price {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .item-desc {
+    padding: 0px !important;
+    margin-top: 32px;
+    margin-left: 32px;
+  }
+  .item-info {
+    padding: 0px !important;
+    color: #999999;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 32px;
+    width: 680px;
+  }
+  .btn-comprar {
+    background-color: #3483fa;
+    margin-right: 32px;
+  }

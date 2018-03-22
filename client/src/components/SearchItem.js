@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
 // Assets
+import './css/search_item.css';
 import shipping from "../assets/ic_shipping.png";
 
 class SearchItem extends Component {
